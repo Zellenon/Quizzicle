@@ -1,0 +1,6 @@
+---
+
+# It's unclear what this does at current
+GameManager:
+
+  GameManager():

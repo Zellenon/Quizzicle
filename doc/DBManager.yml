@@ -1,0 +1,23 @@
+---
+
+# Handles all direct database interaction
+DBManager:
+
+  DBManager():
+
+  getContent(int id):
+
+  getDifficulty(int id):
+    returns: int
+
+  getAnswers(int id):
+    returns: String array
+
+  getCorrect(ind id):
+    returns: String array
+
+  getRandomQuestion(int diff):
+    returns: Question object
+
+  getURL(int id):
+    returns: String

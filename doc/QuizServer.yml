@@ -1,0 +1,36 @@
+---
+
+# Drives the game, choosing questions and when to send them to people.
+QuizServer:
+
+  Constructor():
+    # Clears all the teams
+    # Makes a number of teams equal to NUM_TEAMS in the GM
+
+  SmallestTeam():
+    returns: Team objects
+    # Returns the smallest team in the GM's .teams arrayList
+
+  RegisterPlayer(String username, NetworkHandler connection):
+    returns: The Team object that the player was added to.
+    # Makes a new Player object, adds it to the SmallestTeam(), adds it
+    #  to the GM's players arrayList, and returns the team it was added to
+
+  GetPlayer(NetworkHandler connection):
+    returns: Player object, or null
+    # Finds the Player object associated with an existing connection.
+    # Returns null if the connection does not have a player in the
+    #  GM's players arrayList
+
+  getRandomQuestion(int diff):
+    returns: Question object, or null
+    # Gets a random question of the provided difficulty and topic matching
+    #  The GM's getCategory().
+
+  AreAnswersCorrect(ArrayList<String> answers, Question question):
+    returns: boolean
+    # Returns true if the answers array matches the question's getCorrectAnswers() array
+
+  IsUsernameValid(String username):
+    returns: boolean
+    # Returns false if anyone in the game already has the provided username, otherwise true.

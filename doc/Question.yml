@@ -1,0 +1,27 @@
+---
+
+# Holds all the information about one question, along with its answers.
+Question:
+
+  Question(int id):
+    # id is the database ID of the associated question
+    # Connects to the database in the constructor to download information
+    #  about itself.
+
+  getContent():
+    returns: Object object
+    # ??
+
+  getAnswers():
+    returns: Object array
+    # ??
+
+  getDifficulty():
+    returns: An int representing the difficulty (1-3)
+
+  getId():
+    returns: database ID
+
+  getCorrectAnswers():
+    returns: String array
+    # returns an array of all the strings that are considered correct answers

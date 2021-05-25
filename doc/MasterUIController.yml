@@ -1,0 +1,68 @@
+---
+
+# Handles all direct GUI interaction.
+MasterUIController:
+
+  MasterUIController():
+    # Loads background audio for playing later
+
+  #   UPPER-LEVEL FUNCTIONS
+
+  loadQuestion(Question q):
+    returns: nothing
+    # Changes the text of the buttons to the question's answer choices
+    # Changes the text of the questionText box to the question text
+    # Changes the image source, if one is provided.
+    # Unlocks all buttons
+
+  lockButton(int buttonNum, bool lock):
+    returns: True if something was changed, false if nothing was.
+    # If lock is true, locks answerButton associated with the provided number.
+    # If lock is false, unlocks the answerButton associated with the provided nubmer.
+
+
+  #   GUI CHANGERS
+
+  setTopicChoices(String[] choices):
+    returns: nothing
+    # Sets the options of the dropdown to the provided strings
+
+  setRoster(Team[] roster):
+    returns: nothing
+    # Adds information about the team roster to the server tab's roster box
+
+  changeTab(int tabNum):
+    returns: nothing
+    # Switches to the provided tab (0 is ServerView, 1 is ClientView).
+
+  changeTab(gameState state):
+    returns: nothing
+    # Switches to the provided tab (main_menu is ServerView, in_progress is ClientView).
+
+
+  setTeamName(String name):
+    returns: nothing
+    # Sets the team name at the top of the screen to the provided name
+
+  setPlayerName(String name):
+    returns: nothing
+    # Sets the player name at the top of the screen to the provided name
+
+  setTeamScore(int score):
+    returns: nothing
+    # Sets the team score at the top of the screen to the provided name
+
+  setTopicDisplay(String topicName):
+    returns: nothing
+    # Sets the current topic display to the provided string
+
+  userNamePopup(boolean error):
+    returns: String
+    # Displays a popup prompting the user for a username
+    # If Error is true, displays an additional message saying that the last
+    #  name entered was taken.
+
+  displayAnswerResult(int answerNum, boolean correct):
+    returns: nothing
+    # Changes the button displays based on which answer was given and
+    #  whether or not the answer was correct.
