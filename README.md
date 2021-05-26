@@ -24,7 +24,7 @@ selected from a larger question set
 
 ![uml_diagram](doc/UML2.png)
 
-[Javadocs]doc/src/package-summary.html)
+[Javadocs](doc/src/package-summary.html)
 
 The frontend is a JavaFX layout controlled by MasterUIController. It has methods corresponding to each of the buttons and elements of the user interface. The user interface has a setup screen where players and teams are shown, and the host can choose the category and start the game. The main game screen displays your current question, your team's points, what team you're on, the current category, and has options to answer the question. Each interaction will call a method in the backend to send a corresponding data packet to the server, and data packets from the server will be reflected by the GUI.
 
